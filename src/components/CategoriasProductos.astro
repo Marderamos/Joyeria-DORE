@@ -1,0 +1,42 @@
+---
+import CardProducts from "../components/Categorias.astro";
+
+const products = [
+    {
+        img: "/assets/img/anillos.jpg",
+        title: "Anillos",
+    },
+    {
+        img: "/assets/img/pulsos.jpg",
+        title: "Pulsos",
+    },
+    {
+        img: "/assets/img/cadenas.jpg",
+        title: "Cadenas",
+    },
+    {
+        img: "/assets/img/relojes.jpg",
+        title: "Relojes",
+    },
+];
+---
+
+<div class="bg-[#EFE9E3] relative overflow-hidden">
+    <img class="absolute left-[-150px] overflow-hidden" src="/assets/img/fondoProductos.png" alt="fondo">
+    <img class="absolute right-[-150px] bottom-0 z-0" src="/assets/img/fondoProductos.png" alt="fondo">
+    <div class="mx-auto py-10 max-w-[95%]">
+        <div class="flex flex-col text-center gap-5 lg:flex-row py-10 max-w-[90%] mx-auto">
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-items-center gap-5 mt-2 z-10">
+            {
+                products.map((product) => (
+                    <CardProducts
+                        img={product.img}
+                        title={product.title}
+                    />
+                ))
+            }
+            
+        </div>
+    </div>
+</div>

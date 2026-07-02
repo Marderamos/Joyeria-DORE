@@ -1,21 +1,20 @@
----
-import bgVideo from "../assets/video/bg.mp4";
----
 
 <div class="relative h-screen overflow-hidden">
     <video
         class="absolute inset-0 w-full h-full object-cover"
-        src={bgVideo} autoplay muted loop playsinline
+        src="../assets/video/bg.mp4" autoplay muted loop playsinline
     ></video>
     <div class="absolute inset-0 bg-black/30"></div>
 
-    <div class="absolute bottom-24 left-32 z-10">
+    <div class="absolute bottom-24 left-32 z-20">
 
-        <h2 class="text-white  text-9xl font-style-cursive text-center" style="font-family: 'Cormorant Garamond', serif;">
+        <h2
+        class="text-white text-9xl text-center font-light"
+        style="font-family: 'Cormorant Garamond', serif;">
             DORÉ
         </h2>
 
-        <p class="mt-4 text-white text-2xl" style="font-family: 'Cormorant Garamond'">
+        <p class="mt-4 text-white text-2xl font-light" style="font-family: 'Cormorant Garamond', serif;">
             El lujo que trasciende generaciones.
         </p>
     </div>
