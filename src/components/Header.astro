@@ -1,29 +1,35 @@
 ---
 import MenuLateral from "./MenuLateral.astro";
 ---
+
 <header class="fixed top-0 left-0 z-50 w-full">
 
     <div class="flex items-center justify-between px-8 py-6">
 
         <div class="flex items-center gap-4">
-            <button class="text-white hover:text-[#C08562] transition-colors duration-300 cursor-pointer">
 
-                <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke-width="1.5"
-                    stroke="currentColor"
-                    class="w-9 h-9"
-                >
-                    <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-                    />
-                </svg>
+            <button
+            id="abrirMenu"
+            class="text-white hover:text-[#C08562] transition-colors duration-300 cursor-pointer"
+            aria-label="Abrir menú"
+        >
 
-            </button>
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-9 h-9"
+            >
+        <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+        />
+    </svg>
+
+</button>
 
             <h1
                 class="text-white text-4xl tracking-[0.2em]"
@@ -33,9 +39,27 @@ import MenuLateral from "./MenuLateral.astro";
             </h1>
 
         </div>
-        <button class="text-white hover:text-[#C08562] transition-colors duration-300 cursor-pointer">
-        </button>
 
     </div>
 
 </header>
+
+<MenuLateral />
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+    const abrir = document.getElementById("abrirMenu");
+    const cerrar = document.getElementById("cerrarMenu");
+    const menu = document.getElementById("menuLateral");
+
+    abrir?.addEventListener("click", () => {
+        menu?.classList.remove("-translate-x-full");
+    });
+
+    cerrar?.addEventListener("click", () => {
+        menu?.classList.add("-translate-x-full");
+    });
+
+});
+</script>
