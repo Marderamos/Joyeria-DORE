@@ -1,0 +1,96 @@
+<div class="max-w-4xl mx-auto bg-white rounded-xl shadow-lg p-10">
+
+    <h1
+        class="text-4xl text-center text-[#693B20] tracking-[0.15em]"
+        style="font-family: 'Cormorant Garamond', serif;"
+    >
+        ADMINISTRADOR DORÉ
+    </h1>
+
+    <p class="text-center text-gray-500 mt-2 mb-10">
+        Agrega un nuevo producto al catálogo
+    </p>
+
+    <!-- Nombre -->
+    <div class="mb-6">
+        <label class="block text-[#693B20] mb-2 font-medium">
+            Nombre del producto
+        </label>
+
+        <input
+            type="text"
+            placeholder="Ej. Anillo Solitario"
+            class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:border-[#C08562]"
+        >
+    </div>
+
+    <!-- Descripción -->
+    <div class="mb-6">
+        <label class="block text-[#693B20] mb-2 font-medium">
+            Descripción
+        </label>
+
+        <textarea
+            rows="4"
+            placeholder="Describe el producto..."
+            class="w-full border border-gray-300 rounded-lg px-4 py-3 resize-none focus:outline-none focus:border-[#C08562]"
+        ></textarea>
+    </div>
+
+    <!-- Precio -->
+    <div class="mb-6">
+        <label class="block text-[#693B20] mb-2 font-medium">
+            Precio
+        </label>
+
+        <input
+            type="number"
+            placeholder="$0.00"
+            class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:border-[#C08562]"
+        >
+    </div>
+
+    <!-- Categoría -->
+    <div class="mb-6">
+        <label class="block text-[#693B20] mb-2 font-medium">
+            Categoría
+        </label>
+
+        <select
+            class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:border-[#C08562]"
+        >
+            <option>Selecciona una categoría</option>
+            <option>Anillos</option>
+            <option>Pulsos</option>
+            <option>Cadenas</option>
+            <option>Relojes</option>
+            <option>Hombre</option>
+            <option>Mujer</option>
+        </select>
+    </div>
+
+    <!-- Imagen -->
+    <div class="mb-10">
+        <label class="block text-[#693B20] mb-2 font-medium">
+            Imagen
+        </label>
+
+        <input
+            type="file"
+            accept="image/*"
+            class="block w-full text-gray-700 border border-gray-300 rounded-lg p-3 cursor-pointer"
+        >
+    </div>
+
+    <!-- Botón -->
+    <div class="flex justify-center">
+
+        <button
+            class="bg-[#693B20] hover:bg-[#C08562] text-white px-10 py-3 rounded-lg transition duration-300"
+        >
+            Guardar producto
+        </button>
+
+    </div>
+
+</div>

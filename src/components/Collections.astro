@@ -1,0 +1,39 @@
+---
+interface Props {
+    img: string;
+    title: string;
+}
+
+const { img, title } = Astro.props;
+---
+
+<div class="relative w-full overflow-hidden group">
+
+    <img
+        src={img}
+        alt={title}
+        class="w-full h-[480px] object-cover transition duration-500 group-hover:scale-105"
+    />
+
+    <div class="absolute inset-0 bg-black/25"></div>
+
+    <div class="absolute bottom-8 left-8 text-white">
+
+        <h3
+            class="text-4xl max-w-[80%]"
+            style="font-family: 'Cormorant Garamond', serif;"
+        >
+            {title}
+        </h3>
+
+        <a
+            href="#"
+            class="mt-4 inline-block text-xl"
+            style="font-family: 'Cormorant Garamond', serif;"
+        >
+            Ver más >
+        </a>
+
+    </div>
+
+</div>

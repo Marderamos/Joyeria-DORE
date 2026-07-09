@@ -1,0 +1,57 @@
+---
+import CollectionSection from "../components/Collections.astro";
+
+const products = [
+    {
+        img: "/assets/img/anillos.jpg",
+        title: "El regalo ideal para tu persona ideal",
+    },
+    {
+        img: "/assets/img/pulsos.jpg",
+        title: "VVS más exclusivos",
+    },
+    {
+        img: "/assets/img/cadenas.jpg",
+        title: "El mejor regalo para el hombre de casa",
+    },
+    {
+        img: "/assets/img/relojes.jpg",
+        title: "Si buscas compromiso aquí tienes respuestas aseguradas",
+    },
+];
+---
+
+<div class="bg-[#EFE9E3] relative overflow-hidden">
+
+    <!-- Fondo izquierdo -->
+    <img
+        class="absolute left-[-150px] top-0"
+        src="/assets/img/fondoProductos.png"
+        alt="Fondo"
+    />
+
+    <!-- Fondo derecho -->
+    <img
+        class="absolute right-[-150px] bottom-0"
+        src="/assets/img/fondoProductos.png"
+        alt="Fondo"
+    />
+
+    <div class="relative z-10 w-full px-1 py-8">
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+
+            {
+                products.map((product) => (
+                    <CollectionSection
+                        img={product.img}
+                        title={product.title}
+                    />
+                ))
+            }
+
+        </div>
+
+    </div>
+
+</div>
